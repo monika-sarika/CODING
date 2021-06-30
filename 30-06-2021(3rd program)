@@ -1,0 +1,39 @@
+        import java.util.*;
+  public class Sumprd {
+      public static void main(String args[]) {
+          Scanner sc=new Scanner(System.in);
+
+        int n=sc.nextInt();
+
+       int num=n;
+       int rem;
+
+       int prd=1;
+
+       int sum=0;
+
+        while(n>0)
+
+            {
+
+            rem=n%10;
+
+            prd=rem*prd; 
+
+           sum=sum+rem;
+
+            n=n/10;
+
+           }
+
+       System.out.println(prd-sum); 
+    }
+}
+_____________________________________________________________
+output
+      java -cp /tmp/qxfa67XCBX Sumprd
+234
+15
+    java -cp /tmp/qxfa67XCBX Sumprd
+4421
+21
