@@ -1,0 +1,44 @@
+import java.util.*;
+import java.io.*;
+
+public class Program {
+   static int replaceDigit(int n, int x, int y )
+    {
+        int result = 0, multiply = 1;
+        while(n > 0)
+        {
+            int remainder = n % 10;
+            if ( remainder ==x)
+            result = result + y * multiply;
+            else
+            result = result + remainder * multiply;
+            multiply *= 10;
+            n = n / 10;
+        }
+        if(n == x)
+        result = result + y * multiply;
+        else
+        result = result + n * multiply;
+        return result;
+    }
+    public static void main(String[] args) {
+       Scanner sc= new Scanner(System.in);
+       int n= sc.nextInt();
+       int x= sc.nextInt();
+       int y= sc.nextInt();
+    
+        System.out.println(replaceDigit(n, x, y)); 
+    }
+}
+_______________________________________________________________________
+output
+     java -cp /tmp/FBLvGSmUus Program
+16719
+1
+8
+86789
+     java -cp /tmp/PjdVcxU6o4 Program
+234278
+2
+5
+534578
