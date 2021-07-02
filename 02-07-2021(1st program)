@@ -1,0 +1,43 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args) {
+		Scanner sc = new Scanner(System.in);
+		int t = sc.nextInt();
+		while(t-->0) {
+		    int n=sc.nextInt();
+		    int a[][] = new int[n][n];
+		    int l=0;
+		    int k,i;
+		    for(i=0;i<n;i++) {
+		        for(k=0;k<=i;k++) {
+		            a[k][i-k]=l+1;
+		            l++;
+		           
+		        }
+		    }
+		    l=n*n;
+		    for(i=0;i<n-1;i++) {
+		        for(k=0;k<=i;k++) {
+		            a[n-1-k][n-1-i+k]=l;
+		            l=l-1;
+		        }
+		    }
+		    for(i=0;i<n;i++) {
+		        for(k=0;k<n;k++) {
+		            System.out.print(a[i][k]+" ");
+		        }
+		        System.out.print("\n");
+		    }
+		}
+	}
+}
+______________________________________________________________________________
+Output
+     java -cp /tmp/FukviBfRTU PrintPattern
+1
+4
+1 2 4 7 
+3 5 8 11 
+6 9 12 14 
+10 13 15 16 
