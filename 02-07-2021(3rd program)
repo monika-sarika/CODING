@@ -1,0 +1,34 @@
+import java.util.*;
+import java.math.*;
+public class Main
+{
+	public static void main (String[] args)
+	{
+	   Scanner sc=new Scanner(System.in);
+	   int n=sc.nextInt();
+        int x;
+    
+        while(n>0) {
+            x = sc.nextInt();
+            BigInteger t = new BigInteger("1");
+            for(int i = 2; i <= x; i++ ) {
+                 t= t.multiply(BigInteger.valueOf(i));
+            }n--;
+                System.out.println(t);
+            
+        }
+	}
+
+}
+___________________________________________________________________
+Output
+     java -cp /tmp/8RiVns0czs HelloWorld
+     4
+5
+120
+6
+720
+4
+24
+3
+6
