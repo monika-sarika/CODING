@@ -1,0 +1,33 @@
+import java.util.*;
+public class Automorphic  
+{   
+public static void main(String args[])   
+{   
+Scanner sc=new Scanner (System.in);
+int num=sc.nextInt();
+int square = num * num;  
+int x=square;
+int y=num;
+for(int i=1;i<=1;i++)
+{ 
+num = num/10;   
+square = square/10;  
+if (y % 10 != x % 10)   
+System.out.println(x+" is not a Automorphic num"); 
+else
+ System.out.println(x+" is Automorphic num");
+}
+}
+}
+____________________________________________________________________________________
+Output
+    java -cp /tmp/j8jhb9f7SS Automorphic
+76
+5776 is Automophic num
+
+      java -cp /tmp/j8jhb9f7SS Automorphic
+25
+625 is Automorphic num
+      java -cp /tmp/j8jhb9f7SS Automorphic
+7
+49 is not a Automorphic num
