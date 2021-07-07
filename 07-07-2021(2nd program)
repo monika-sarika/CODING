@@ -1,0 +1,42 @@
+import java.io.*;
+ 
+class Main {
+    static void getMajority(int a[], int n)
+    {
+        int total = 0;
+        int index = -1;
+        for (int i = 0; i < n; i++) {
+            int count = 0;
+            for (int j = 0; j < n; j++) {
+                if (a[i] == a[j])
+                    count++;
+            }
+            if (count > total)
+            {
+                total = count;
+                index = i;
+            }
+        }
+        if (total > n / 2)
+            System.out.println(a[index]);
+    }
+    public static void main(String[] args)
+    {
+ 
+        int a[] = {3,2,3};
+        int n = a.length;
+        int a1[]={2,2,1,1,1,2,2};
+        int n1=a1.length;
+         System.out.println("majority element is");
+        getMajority(a, n);
+        System.out.println("majority element is");
+        getMajority(a1, n1);
+    }
+}
+_____________________________________________________________________________________________
+Output
+   java -cp /tmp/yHb3SlGCfL Main
+majority element is
+3
+majority element is
+2
