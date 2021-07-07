@@ -1,0 +1,47 @@
+class Singlenum {
+    static int getSingle(int a[], int n)
+    {
+        int single = 0, repeat = 0;
+        int c;
+ 
+        for (int i = 0; i < n; i++) {
+            repeat = repeat | (single & a[i]);
+ 
+            single = single ^ a[i];
+ 
+            c= ~(single & repeat);
+ 
+            single &= c;
+ 
+            repeat &= c;
+        }
+        return single;
+    }
+
+    public static void main(String args[])
+    {
+        int a[] = {2,2,1};
+        int n = a.length;
+        int a1[]={4,1,2,1,2};
+        int n1=a1.length;
+        int a2[]={1};
+        int n2=a2.length;
+        
+        System.out.println("The single num is " );
+        System.out.println(getSingle(a, n));
+        System.out.println("The single num is " );
+        System.out.println(getSingle(a1, n1));
+         System.out.println("The single num is " );
+        System.out.println(getSingle(a2, n2));
+    
+    }
+}
+____________________________________________________________________________________
+Output
+   java -cp /tmp/yHb3SlGCfL Singlenum
+The single num is 
+1
+The single num is 
+4
+The single num is 
+1
