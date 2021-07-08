@@ -1,0 +1,53 @@
+import java.util.*;
+public class Main
+{
+	public static void main(String[] args)
+		{	
+			Scanner sc = new Scanner(System.in);
+			int m, n, row, col, sum = 0, rowindex = 0, colindex = 0;
+			System.out.print("enter rows and columns: ");
+			m = sc.nextInt();
+			n = sc.nextInt();
+			System.out.println("enter elements in matrix: ");
+			int[] rowarray = new int[m];
+			int i, j;
+			int[][] mat = new int[m][n];
+			for(i = 0; i < m; i++)
+				{
+					for(j = 0; j < n; j++)
+						mat[i][j] = sc.nextInt();
+				}
+
+			int z = 0;
+
+						System.out.println("Sum of columns is ");
+			sum = 0;
+			int y = 0;
+			int[] colarray = new int[n];
+			for (i = 0; i < n; ++i)
+				{
+					sum = 0;
+					for (j = 0; j < m; ++j)
+						{
+							sum = sum + mat[j][i];
+						}
+					System.out.print(sum +  " ");
+					
+					colarray[y++] = sum;
+	
+            }
+
+
+	}
+
+}
+_______________________________________________________________________________________________
+Output
+     enter rows and columns: 
+3 3
+enter elements in matrix: 
+3 5 6 
+4 6 8
+9 8 7
+Sum of columns is 
+16 19 21 
