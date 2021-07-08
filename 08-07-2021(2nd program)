@@ -1,0 +1,50 @@
+import java.util.*;
+public class Main
+{
+	public static void maxcolumn(int mat[][], int m, int n)
+		{
+			int i,j;
+			System.out.println("largest colunm nums");
+			for(i = 0; i < n; i++)
+				{
+					int max = mat[0][i];
+					for(j = 1; j < m; j++)
+						{
+							if(mat[j][i] > max)
+								{
+									max = mat[j][i];
+								}
+						}
+				System.out.println(max);
+			}
+		}
+	public static void main(String[] args)
+	{
+		int n, m;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the rows and columns of the matrix : ");
+		m = sc.nextInt();
+		n = sc.nextInt();
+		int[][] mat1 = new int[m][n];
+		System.out.println("enter the matrix elements : ");
+		int i, j;
+		for(i = 0; i < m; i++)
+			{
+				for(j = 0; j < n; j++)
+					mat1[i][j] = sc.nextInt();
+			}
+		maxcolumn(mat1,m,n);
+	}
+}
+_________________________________________________________________________________________________
+Output
+   Enter the rows and columns of the matrix : 
+3 3
+enter the matrix elements : 
+3 4 5 
+6 7 8
+9 1 2
+largest colunm nums
+9
+7
+8
