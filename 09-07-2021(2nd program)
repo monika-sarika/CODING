@@ -1,0 +1,90 @@
+
+import java.util.*;
+public class Main
+{
+   public static void main(String args[])
+   {
+      int row1, col1,row2,col2,i,j,n;
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter the number of matrix1  rows");
+      row1 = sc.nextInt();
+      System.out.println("Enter the number  matrix1 columns");
+      col1  = sc.nextInt();
+      System.out.println("Enter the number of matrix2 rows");
+      row2 = sc.nextInt();
+      System.out.println("Enter the number  matrix2 columns");
+      col2  = sc.nextInt();
+    
+    if(row1 >col1)
+     n=row1;
+    else
+     n= col1;
+      int mat1[][] = new int[n][n]; 
+      int mat2[][]= new int[n][n];
+      System.out.println("Enter the elements of matrix1");
+      for (  i= 0 ; i < row1 ; i++ )
+       {   
+            for ( j= 0 ; j < col1 ;j++ )
+             mat1[i][j] = sc.nextInt();    
+       }
+       System.out.println("enter the elements of the matrix2");
+       for (  i= 0 ; i < row2 ; i++ )
+       {   
+            for ( j= 0 ; j < col2 ;j++ )
+             mat2[i][j] = sc.nextInt();    
+       }
+      
+      for (  i= 0 ; i < n; i++ )
+         for ( j= i+1 ; j < n;j++ )
+             {
+             int [][] temp = mat1;
+                    mat1 = mat2;
+                    mat2 = temp;
+
+            }
+      System.out.println("swapping  of   matrix:-");
+      System.out.println("matrix 1");
+      
+      for (  i= 0 ; i < col1 ; i++ )
+       {  
+                for ( j= 0 ; j < row1;j++ )
+                System.out.print(mat1[i][j]+" ");
+                System.out.println();
+                }  
+                System.out.println("matrix 2");
+                for(i=0;i<col2;i++)
+                {
+                for(j=0;j<row2;j++)
+                 System.out.print(mat2[i][j]+" ");
+                System.out.println();
+       
+       }
+   }
+}
+________________________________________________________________________________________________
+Output
+   Enter the number of matrix1  rows
+3
+Enter the number  matrix1 columns
+3
+Enter the number of matrix2 rows
+3
+Enter the number  matrix2 columns
+3
+Enter the elements of matrix1
+10 15 13
+11 8 5
+9 4 3
+enter the elements of the matrix2
+1 44 6
+87 65 43
+54 91 12
+swapping  of   matrix:-
+matrix 1
+1 44 6 
+87 65 43 
+54 91 12 
+matrix 2
+10 15 13 
+11 8 5 
+9 4 3 
