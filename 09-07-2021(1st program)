@@ -1,0 +1,55 @@
+import java.util.*;
+public class Main {
+     
+    public static int difference(int a[][], int n)
+    {
+        int d1 = 0, d2 = 0;
+      
+        for (int i = 0; i < n; i++)
+        {
+            for (int j = 0; j < n; j++)
+            {
+                if (i == j)
+                    d1 += a[i][j];
+                if (i == n - j - 1)
+                    d2 += a[i][j];
+            }
+        }
+                   System.out.println("sum of the d1 = "+d1);
+            System.out.println("sum of the d2 = "+d2);
+            int diff=0;
+            diff=d1-d2;
+            System.out.println("diagonal difference is ");
+            return diff;
+    }
+    
+    public static void main(String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter the row and colunm size");
+        int n=sc.nextInt();
+        System.out.println("enter the array values");
+        int a[][]=new int[n][n];
+        for(int i=0;i<n;i++)
+        {
+          for(int j=0;j<n;j++)
+          {
+        a[i][j]=sc.nextInt();
+          }
+        }
+        System.out.print(difference(a, n));
+    }
+}
+_____________________________________________________________________________________________________________-
+Output
+    java -cp /tmp/dZTdDqy1ta Main
+enter the row and colunm size
+3
+enter the array values
+10 15 13
+11 8 5
+9 4 3
+sum of the d1 = 21
+sum of the d2 = 30
+diagonal difference is 
+-9
