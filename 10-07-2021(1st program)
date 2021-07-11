@@ -1,0 +1,17 @@
+import java.lang.*;
+import java.io.*;
+import java.util.*;
+class ReverseString {
+    public static void main(String[] args)
+    {
+        String input = "Hello World";
+        char[] rev1 = input.toCharArray();
+ 
+        for (int i = rev1.length - 1; i >= 0; i--)
+            System.out.print(rev1[i]);
+    }
+}
+_______________________________________________________________________________________
+Output
+  java -cp /tmp/Flji0h0mzT ReverseString
+dlroW olleH
