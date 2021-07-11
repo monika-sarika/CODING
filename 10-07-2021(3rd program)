@@ -1,0 +1,14 @@
+import java.util.*;
+ public class Main {
+     public static void main(String[] args){	
+     Scanner in = new Scanner(System.in);
+     System.out.println("Input a String: ");
+	 String s1 = in.nextLine();
+	 System.out.println(s1.toLowerCase()); 
+	 }			
+}
+______________________________________________________________________
+Output
+    Input a String: 
+sri ADITYA DEGREE college
+sri aditya degree college
