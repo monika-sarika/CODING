@@ -1,0 +1,25 @@
+import java.util.*;
+public class Main
+{
+    public static void main(String[] args) 
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("input sentence :-");
+        String str = sc.nextLine();
+        String s1[]=str.split("\\s");
+        String s2="";
+ 
+        for(String word:s1) 
+        {
+            String s3=word.substring(0,1);
+            String r=word.substring(1);
+            s2+=s3.toUpperCase()+r+" ";
+        }
+        System.out.println("output sentence :-"+s2);
+    }
+}
+_______________________________________________________________________________
+Output
+  input sentence :-
+this is coding
+output sentence :-This Is Coding 
