@@ -1,0 +1,59 @@
+import java.util.*;
+public class Main
+{
+  public static void main (String[]args)
+  {
+      //for numerical types
+      ArrayList < Integer > A = new ArrayList < Integer > ();
+      A.add(10);
+      A.add(20);
+      A.add(30);
+      A.add(40);
+      ArrayList < Integer > B = new ArrayList < Integer > ();
+      B.add(100);
+      B.add(200);
+      B.add(300);
+      B.add(400);
+      
+    for (int D:A)
+      {
+	System.out.print (" "+D);
+      }
+      for (int D:B)
+      {
+	System.out.print(" "+D);
+      } 
+      System.out.println("");
+      //for string types
+        ArrayList < String > a = new ArrayList < String > ();
+      a.add("red");
+      a.add("blue");
+      a.add("green");
+      a.add("pink");
+      ArrayList < String > b = new ArrayList < String > ();
+      b.add("white");
+      b.add("yellow");
+      b.add("pink");
+      
+    for (String d:a)
+      {
+	System.out.print (" "+d);
+      }
+      for (String d:b)
+      {
+	System.out.print(" "+d);
+      }
+      
+     A.addAll (B);
+
+      a.addAll (b);
+  }
+
+}
+
+
+________________________________________________________________
+Output:-
+    10 20 30 40 100 200 300 400
+ red blue green pink white yellow pink
+
