@@ -1,21 +1,26 @@
 import java.util.*;
-public class Solution {
-    public int[] sortArrayByParityII(int[] n) {
+public class Solution
+{
+    public int[] sortArrayByParityII(int[] n) 
+    {
        ArrayList<Integer> evennum=new ArrayList<Integer>();
         ArrayList<Integer> oddnum=new ArrayList<Integer>();
-        for(int i=0;i<n.length;i++){
+        for(int i=0;i<n.length;i++) 
+        {
             if(n[i]%2==0)
             evennum.add(n[i]);
             else
             oddnum.add(n[i]);
         }
         int i=0;
-        for(Integer y:evennum){
+        for(Integer y:evennum)
+        {
             n[i]=y;
             i+=2;
         }
         i=1;
-        for(Integer y:oddnum){
+        for(Integer y:oddnum)
+        {
             n[i]=y;
             i+=2;
             
