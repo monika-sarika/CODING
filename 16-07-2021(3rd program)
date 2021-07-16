@@ -1,0 +1,130 @@
+import java.util.*;
+public class Main
+{
+    public static void main (String[] args)
+    {
+    LinkedList A=new LinkedList();
+    Scanner input = new Scanner(System.in);
+    boolean d = false;
+    while(d == false) 
+    { 
+        System.out.println("");
+        System.out.println("1. Begininsert");
+        System.out.println("2. Endinsert");
+        System.out.println("3. Position Insert");
+        System.out.println("4. BeginDelete ");
+        System.out.println("5. End Delete");
+        System.out.println("6. Position Delete");
+        System.out.println("7. display");
+        System.out.println("8. Quit");
+        System.out.println("");
+        System.out.println("Select an Option"); 
+
+        int select=input.nextInt();
+
+        switch(select) 
+        {
+        case 1: 
+            System.out.println("Enter n value : ");
+            int frontelement = input.nextInt();
+            A.addFirst(frontelement);
+            break;
+
+        case 2:
+            System.out.println("Enter n value : ");
+            int lastelement = input.nextInt();
+            A.addLast(lastelement);
+            break;
+
+        case 3:
+            System.out.println("Select Position: ");
+            int insertposition = input.nextInt();
+            System.out.println("Enter n value : ");
+            int insertdata = input.nextInt();
+            A.add(insertposition, insertdata);
+            break;
+            
+        case 4:    
+            A.removeFirst();
+            break;
+            
+        case 5:
+            A.removeLast();
+            break;
+            
+        case 6:
+            System.out.println("Select Position: ");
+            int deletePosition = input.nextInt();
+            A.remove(deletePosition);
+            break;
+            
+        case 7:
+            System.out.println(A);
+            break;
+
+        case 8:
+            System.out.println("END");
+            d=true;
+            break;
+
+        }                       
+      }
+   }
+
+}
+_________________________________________________________________________________________________________________
+Output:-
+
+1. Begininsert
+2. Endinsert
+3. Position Insert
+4. BeginDelete 
+5. End Delete
+6. Position Delete
+7. display
+8. Quit
+
+Select an Option
+1
+Enter n value : 
+10
+
+1. Begininsert
+2. Endinsert
+3. Position Insert
+4. BeginDelete 
+5. End Delete
+6. Position Delete
+7. display
+8. Quit
+
+Select an Option
+2
+Enter n value : 
+20
+
+1. Begininsert
+2. Endinsert
+3. Position Insert
+4. BeginDelete 
+5. End Delete
+6. Position Delete
+7. display
+8. Quit
+
+Select an Option
+7
+[10, 20]
+
+1. Begininsert
+2. Endinsert
+3. Position Insert
+4. BeginDelete 
+5. End Delete
+6. Position Delete
+7. display
+8. Quit
+
+Select an Option
+
+        
