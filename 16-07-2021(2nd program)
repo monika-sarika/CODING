@@ -1,0 +1,52 @@
+import java.util.*;
+public class Main
+{
+    public static void main (String[] args) 
+   { 
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter n value");
+        int n=sc.nextInt();
+        Vector<Integer> v=new Vector<Integer>();
+        System.out.println("enter vector values");
+        for(int i=0;i<n;i++)
+        {
+            v.add(sc.nextInt());
+        }
+        System.out.println("enter the existed value");
+        int m=sc.nextInt();
+        if(v.contains(m))
+        {
+           v.remove(v.indexOf(m));
+           System.out.println("list after deletion");
+
+           System.out.println(v);
+        }
+        else
+        System.out.println("not found");
+        
+        }
+    }
+________________________________________________________________________________
+output:-
+ 
+example output 1:-
+  
+  enter n value
+5
+enter vector values
+10 20 30 40 50
+enter the existed value
+30
+list after deletion
+[10, 20, 40, 50]
+
+________________________________________________
+ example output2:-
+ 
+ enter n value
+5
+enter vector values
+10 20 30 40 50
+enter the existed value
+2
+not found
