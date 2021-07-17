@@ -1,0 +1,39 @@
+class MyHashSet {
+    HashMap<Integer,Integer> s;
+
+    /** Initialize your data structure here. */
+    public MyHashSet() {
+        s = new HashMap<Integer,Integer>();    
+    }
+    
+    public void add(int key) {
+        s.put(key,key);    
+    }
+    
+    public void remove(int key) {
+        s.remove(key);        
+    }
+    
+    /** Returns true if this set contains the specified element */
+    public boolean contains(int key) {
+        return s.containsKey(key);
+    }
+}
+
+/**
+ * Your MyHashSet object will be instantiated and called as such:
+ * MyHashSet obj = new MyHashSet();
+ * obj.add(key);
+ * obj.remove(key);
+ * boolean param_3 = obj.contains(key);
+ */
+ ___________________________________________________________________________
+ Output:-
+  
+  Your input
+["MyHashSet","add","add","contains","contains","add","contains","remove","contains"]
+[[],[1],[2],[1],[3],[2],[2],[2],[2]]
+Output
+[null,null,null,true,false,null,true,null,false]
+Expected
+[null,null,null,true,false,null,true,null,false]
