@@ -1,0 +1,53 @@
+import java.util.*;
+class Main
+{
+    static void repeat(int arr[])
+    {
+        int t = -1;
+        HashSet<Integer> set = new HashSet<>();
+        for (int i=arr.length-1; i>=0; i--)
+        {
+            if (set.contains(arr[i]))
+                t = i;
+ 
+            else   
+                set.add(arr[i]);
+        }
+        if (t != -1)
+          System.out.println("true");
+        else
+          System.out.println("false");
+    }
+    public static void main (String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter size");
+        int n=sc.nextInt();
+        int a[]=new int[n]; 
+        System.out.println(" Enter values into array ");
+        for(int i=0;i<n;i++)
+        a[i]=sc.nextInt();
+        System.out.println("my output is");
+        repeat(a);
+    }
+}
+__________________________________________________________________________________
+Output:-
+
+Example1:-
+          enter size
+          5
+          Enter values into array 
+          10 2 3 4 10
+          my output is
+          true
+          
+Example2:-
+         enter size
+         5
+         Enter values into array 
+         10 20 30 40 50
+         my output is
+         false
+
+ 
