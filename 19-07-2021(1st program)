@@ -1,0 +1,78 @@
+import java.util.*;
+class Main
+{
+	public static void main(String args[])
+	{
+		Scanner sc = new Scanner(System.in);
+		int t = 10;
+		while(t>0)
+		{
+				HashMap<Integer, Integer> hm = new HashMap<Integer, Integer>();
+				int q = sc.nextInt();
+				while(q>0)
+				{
+					hashmap g = new hashmap();
+					char c = sc.next().charAt(0);
+					if(c=='a')
+					{
+						int x = sc.nextInt();
+						int y = sc.nextInt();
+						g.add_value(hm,x,y);
+					}
+					if(c=='b')
+					{
+						int y = sc.nextInt();
+						System.out.print(g.find_value(hm,y)+" ");
+					}
+					if(c=='c')
+						System.out.print(g.getSize(hm)+" ");
+					if(c=='d')
+					{
+						int x = sc.nextInt();
+						g.removeKey(hm,x);
+					}
+					q--;
+				}
+				System.out.println();
+		t--;
+		}
+	}
+}
+	
+class hashmap
+{
+    void add_value(HashMap<Integer,Integer> hm, int x, int y)
+    {
+	hm.put(x,y);
+    }
+	
+    int find_value(HashMap<Integer, Integer> hm, int x)
+    {
+        if(hm.containsKey(x))
+       return hm.get(x);
+       return -1;
+    }
+    int getSize(HashMap<Integer, Integer> hm)
+    {
+	return hm.size();
+    }
+    void removeKey(HashMap<Integer, Integer> hm, int x)
+    {
+        if(hm.containsKey(x))
+	hm.remove(x);	
+    }
+}
+______________________________________________________________________
+my Output:-
+
+
+5
+a 1 2
+a 66 3
+b 66
+3 
+d
+1
+c
+1 
+
