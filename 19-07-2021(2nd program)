@@ -1,0 +1,36 @@
+import java.util.*;
+public class Main {
+    public static void main(String[] args)
+    {
+        HashMap<String, Integer> map = new HashMap<>();
+        Scanner sc = new Scanner(System.in);
+        map.put("sak", 5);
+        map.put("varun", 7);
+        map.put("vijay", 3);
+        System.out.println("input: n = "+ map.size());
+        System.out.println(map);
+  
+        String s=sc.nextLine();
+        if (map.containsKey(s)) {
+            Integer a = map.get(s);
+            System.out.println("output  "+ a);
+        }
+        else
+        {
+            System.out.println("-1");
+        }
+    }
+}
+__________________________________________________
+my output:-
+
+input: n = 3
+{sak=5, varun=7, vijay=3}
+sak
+output  5
+
+
+input: n = 3
+{sak=5, varun=7, vijay=3}
+vani
+-1
