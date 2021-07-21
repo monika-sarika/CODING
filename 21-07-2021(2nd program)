@@ -1,0 +1,35 @@
+import java.util.*;
+class Main {
+    static void odd(Stack<Integer> stack)
+    {
+        while (!stack.isEmpty())
+            System.out.print(stack.pop() + " ");
+    }
+    static void deleteOdd(Stack<Integer> stack)
+    {
+        Stack<Integer> st= new Stack<>();
+        while (!stack.isEmpty()) {
+            int val = stack.pop();
+            if (val % 2 != 1)
+                st.push(val);
+        }
+        while (!st.isEmpty())
+            stack.push(st.pop());
+        odd(stack);
+    }
+    public static void main(String[] args)
+    {
+        Stack<Integer> stack = new Stack<>();
+        stack.push(28);
+        stack.push(46);
+        stack.push(31);
+        stack.push(76);
+        stack.push(17);
+ 
+        deleteOdd(stack);
+    }
+}
+______________________________________________________________
+Output
+
+76 46 28 
