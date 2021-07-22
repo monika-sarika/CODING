@@ -1,0 +1,50 @@
+class MyQueue {
+    
+    Stack<Integer> s;
+
+    public MyQueue() {
+        s = new Stack<>();
+    }
+    
+    public void push(int x) {
+        if(s.empty())
+            s.push(x);
+        else{
+            int num = s.pop();
+            this.push(x);
+            s.push(num);
+        }
+    }
+    
+    public int pop() {
+        return s.pop();
+    }
+    
+    public int peek() {
+        return s.peek();
+    }
+    
+    public boolean empty() {
+        return s.empty();
+    }
+}
+/**
+ * Your MyQueue object will be instantiated and called as such:
+ * MyQueue obj = new MyQueue();
+ * obj.push(x);
+ * int param_2 = obj.pop();
+ * int param_3 = obj.peek();
+ * boolean param_4 = obj.empty();
+ */
+ _____________________________________________________________
+ Output:-
+ 
+ Accepted
+Runtime: 0 ms
+Your input
+["MyQueue","push","push","peek","pop","empty"]
+[[],[1],[2],[],[],[]]
+Output
+[null,null,null,1,1,false]
+Expected
+[null,null,null,1,1,false]
