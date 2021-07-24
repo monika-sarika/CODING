@@ -1,0 +1,42 @@
+import java.util.*;
+  
+class Main
+{
+    public static void main (String[] args)
+    {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("enter size(n)");
+        int n=sc.nextInt();
+        int a[]=new int[n];
+        System.out.println("enter  array values:-");
+        for(int i=0;i<n;i++)
+        {
+            a[i]=sc.nextInt();
+        }
+         List<Integer> al = new ArrayList<Integer>();
+         System.out.println("the arraylist is:-");
+         for (Integer i : a)
+            al.add(i);
+            System.out.println(al);
+            
+            Iterator<Integer> iter= al.iterator();
+            System.out.println("displaying using iterator");
+            while (iter.hasNext())
+            {
+            System.out.print(iter.next() + " ");
+            }
+    }
+}
+____________________________________________________________________________________
+output:-
+ 
+ 
+ enter size(n)
+5
+enter  array values:-
+10 20 30 40 50 
+the arraylist is:-
+[10, 20, 30, 40, 50]
+displaying using iterator
+10 20 30 40 50 
+
