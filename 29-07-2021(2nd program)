@@ -1,0 +1,73 @@
+import java.util.*;
+
+class gbc
+
+{
+
+public static void main(String args[])
+
+{
+
+Scanner in=new Scanner(System.in);
+
+
+ 
+
+int tc;
+
+    tc=in.nextInt();
+
+    while(tc-->0)
+
+    {
+
+        int w;
+
+        w=in.nextInt();
+
+        if(w%2==0&&w<=100000)
+
+        {
+
+            if(w!=2)
+
+            System.out.println("Deepa");
+
+            else
+
+            System.out.println("Arjit");
+
+        }
+
+    }
+
+}
+}
+____________________________________________________________________________
+Output:-
+
+RESULT: Sample Test Cases Passed Refer judge environment
+Time (sec)
+
+0.089969
+
+ 
+Memory (KiB)
+
+3137132
+
+ 
+Language
+
+Java 8
+
+Input
+2
+4
+8
+Output
+Deepa
+Deepa
+Expected Correct Output
+Deepa
+Deepa
