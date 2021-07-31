@@ -1,0 +1,47 @@
+import java.util.*;
+public class Main {
+   public static void main(String args[]){
+      int number;
+      Scanner sc = new Scanner(System.in);
+      System.out.println("Enter a number ::");
+      number = sc.nextInt();
+     int c=0;
+     System.out.println("prime factors are ");
+      for(int i = 2; i< number; i++) {
+         
+         while(number%i == 0) {
+            System.out.println(i+" ");
+            number = number/i;
+        c++;
+         }
+      }  
+     
+      if(number >2) {
+         System.out.println(number);
+         c++;
+      }
+       System.out.println("Output:-"+c);
+   }
+}
+
+______________________________________________________________________
+Output:-
+
+Enter a number ::
+225
+prime factors are 
+3 
+3 
+5 
+5 
+Output:-4
+
+
+Enter a number ::
+6
+prime factors are 
+2 
+3
+Output:-2
+
+
