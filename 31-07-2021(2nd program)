@@ -1,0 +1,41 @@
+import java.util.*;
+class Main{ 
+    boolean isPrime(int a)
+    { 
+        int i,c=0;
+        for(i=1;i<=a;i++) 
+            if(a%i==0)
+                c++;
+        return c==2;
+    }
+
+    public static void main(String[] args)
+    { 
+        Scanner sc=new Scanner(System.in);
+        Main t=new Main();
+        int n,i,a;
+        int max=Integer.MIN_VALUE;
+        System.out.println("How many numbers ?");
+        n=sc.nextInt();
+        System.out.println("Enter "+n+" integer");
+        for(i=0;i<n;i++)
+        {
+            a=sc.nextInt(); 
+            if(t.isPrime(a))
+                max=Math.max(max,a);
+        }
+        if(max!=Integer.MIN_VALUE)
+            System.out.println("Largest prime: "+max);
+        else
+            System.out.println("No prime is found");
+    } 
+} 
+___________________________________________________________________
+Output:-
+
+How many numbers ?
+5
+Enter 5 integer
+12 34 23 56 78
+Largest prime: 23
+
